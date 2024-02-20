@@ -1,0 +1,168 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API
+    url: https://virtserver.swaggerhub.com/KOKE106/Highway/1.0.0
+info:
+  description: API to recover user profile
+  version: "1.0.0"
+  title: Get user profile
+  contact:
+    email: koke106@gmail.com 
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+paths:
+  /profile:
+    get:
+      summary: Get user profile
+      description: This operation returns the profile information of the authenticated user.
+      tags:
+        - Perfil
+      parameters:
+        - name: Email
+          in: header
+          required: true
+          description: User email
+          schema:
+            type: string
+      responses:
+        200:
+          description: User profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+        401:
+          description: Not authorized
+        404:
+          description: User not found
+        500:
+          description: Internal error
+  /team:
+    get:
+      summary: Get team info
+      description: This operation returns the info of the team, members, cars...
+      tags:
+        - Team
+      parameters:
+        - name: id
+          in: header
+          required: true
+          description: Id of the team
+          schema:
+            type: string
+      responses:
+        200:
+          description: Team info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Team'
+        401:
+          description: Not authorized
+        404:
+          description: User not found
+        500:
+          description: Internal error
+
+  /car:
+    get:
+      summary: Get car info
+      description: This operation returns all the car info, parts...
+      tags:
+        - Car
+      parameters:
+        - name: id
+          in: header
+          required: true
+          description: Id of the car
+          schema:
+            type: string
+      responses:
+        200:
+          description: Car info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Car'
+        401:
+          description: Not authorized
+        404:
+          description: User not found
+        500:
+          description: Internal error
+  /news:
+    get:
+      summary: News
+      description: This operation returns all the news
+      tags:
+        - News
+      responses:
+        200:
+          description: List of news
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/News'
+        401:
+          description: Not authorized
+        404:
+          description: User not found
+        500:
+          description: Internal error
+
+components:
+  schemas:
+    Profile:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique ID user
+        nombre:
+          type: string
+          description: Username
+        email:
+          type: string
+          description: Email
+        rol:
+          type: string
+          description: User rol
+    Team:
+      type: object
+      properties: 
+        id:
+          type: integer
+          description: Unique ID team
+        nombre:
+          type: string
+          description: Team Name
+    Car:
+      type: object
+      properties: 
+        id:
+          type: integer
+          description: Unique ID team
+        nombre:
+          type: string
+          description: Car Name
+        team_id:
+          type: integer
+          description: Team associate car
+    News:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique ID new
+        titulo:
+          type: string
+          description: News title
+        contenido:
+          type: string
+          description: News content
+        fecha:
+          type: string
+          format: date-time
+          description: Date of the new
+        
