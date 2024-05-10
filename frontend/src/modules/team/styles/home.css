@@ -1,0 +1,31 @@
+.containerMainTeam{
+    margin-bottom: 32px;
+}
+
+.main{
+    flex: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.titleMain{
+    color: white;
+}
+
+.carsContainer{
+    border: 1px;
+    border-radius: 8px;
+    background-color: rgba(159, 156, 156, 0.426);
+    margin: 12px;
+    text-align: center;
+}
+.carName{
+    color:white;
+    font-size:larger;
+    font-weight: 900;
+}
+.carsContainer:hover {
+    cursor: pointer;
+    background-color: rgba(112, 107, 107, 0.822);
+}

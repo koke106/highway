@@ -1,0 +1,16 @@
+
+.contentImage{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.content-image{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    max-width: 70%;
+    align-items: stretch;
+    align-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}

@@ -1,0 +1,45 @@
+.container-card{
+    flex: 1 0 auto;
+    position: relative;
+    width: 50%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 0.5rem 1rem;
+    background-color: white;
+    border-radius: 8px;
+    padding: 0 0.5rem 1rem;
+    margin:6px;
+}
+.left-area{
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 6px;
+}
+.right-area{
+    flex: 1;
+    padding: 6px;
+    width: 50%;
+}
+.title-zone{
+    word-break: break-word;
+    color: #c00c00;
+    display: inline;
+    font-family: Barlow Semi Condensed,Arial,Helvetica,sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.title-card{
+    text-decoration: none;
+    color:#121212;
+    font-family: Barlow Semi Condensed,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+}
+.content-image{
+    width: 90%;
+    display: block;
+    height: auto;
+    font-size: 10px;
+}

@@ -1,0 +1,79 @@
+.main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.containerCars{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.titleMain{
+    color: white;
+}
+
+.carsContainer{
+    border: 1px;
+    border-radius: 8px;
+    background-color: rgba(159, 156, 156, 0.426);
+    margin: 12px;
+    text-align: center;
+}
+.carName{
+    color:white;
+    font-size:larger;
+    font-weight: 900;
+}
+.carsContainer:hover {
+    cursor: pointer;
+    background-color: rgba(112, 107, 107, 0.822);
+}
+.element-form{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    margin-right: 6px;
+    align-items: center;
+    padding-right: 12px;
+}
+.labelText{
+    white-space: pre;
+    margin-top: initial;
+}
+.inputText{
+    margin-right: 12px;
+    margin-left: 12px;
+}
+.formContent{
+    flex:1;
+}
+.revisado{
+    margin-left: 12px;
+}
+.containerOptions{
+    text-decoration: underline;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.textContainer{
+    margin-right: 8px;
+}
+.textareaText{
+    display: flex;
+    flex: 1;
+    width: 98%;
+    resize: none;
+    padding: 12px;
+    margin: 12px;
+}
+.containerOptions:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
